@@ -1,0 +1,20 @@
+<svg width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <radialGradient cy="0.010045" cx="0.996652" spreadMethod="pad" id="svg_2">
+   <stop offset="0" stop-color="#fff"/>
+   <stop offset="1" stop-color="#000000"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="url(#svg_2)" id="canvas_background" height="38" width="38" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-style="italic" font-weight="bold" stroke="#000" transform="matrix(0.2964721846462704,0,0,1.050434844143864,1.5365264957589297,9.132795910887463) " xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_1" y="14.909748" x="12.023532" stroke-width="0" fill="#9ACEE6">DLTOOL</text>
+ </g>
+</svg>

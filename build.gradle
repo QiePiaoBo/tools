@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.1.2'
+    id 'org.jetbrains.changelog' version '1.1.2'
+}
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'java'
+
+
+group 'com.dylan'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    maven {
+        url "https://maven.aliyun.com/nexus/content/groups/public/"
+    }
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+
+dependencies {
+    implementation 'com.alibaba:fastjson:1.2.76'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = "2020.2.4"
+//    updateSinceUntilBuild = false
+
+}

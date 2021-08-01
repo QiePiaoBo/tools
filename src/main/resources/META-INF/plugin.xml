@@ -1,0 +1,104 @@
+<idea-plugin require-restart="false">
+    <id>com.dylan.plugin.tools</id>
+    <name>Plugin1637</name>
+    <version>1.0.0-ALPHA</version>
+    <vendor email="15966245906@163.com" url="http://www.logicer.top">Dylan</vendor>
+
+    <description><![CDATA[
+      <p>Aimed at making some work simple with this plugin. Thank you if you want to use it.</p>
+      <em>Powered by dylan.</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <ul>
+        <li>
+          1. Preparing an environment of nacos to support my develop local.
+        </li>
+        <li>
+          2. Creating a new project with a template which I always use.
+        </li>
+      </ul>
+      <br>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <!--    弹出交互窗口    -->
+        <group id="No1Test" text="FirstFormTest" description="A test for my first plugin">
+            <add-to-group group-id="MainMenu" anchor="last" />
+            <action id="FormAction"
+                    class="com.dylan.tools.action.DialogTestAction"
+                    text="FormTest"/>
+        </group>
+        <!--    普通弹出菜单每个选项都有自己的处理逻辑    -->
+        <action id="com.dylan.tools.action.PopupTestAction"
+                class="com.dylan.tools.action.PopupTestAction"
+                text="PopupTestAction">
+            <add-to-group group-id="PopupMenuActions" anchor="first" />
+            <keyboard-shortcut first-keystroke="control alt 1" keymap="$default" />
+        </action>
+        <group id="popupGroup" />
+        <action class="com.dylan.tools.action.CustomFirstAction"
+                id="com.dylan.tools.action.CustomFirstAction"
+                text="CustomFirstAction">
+            <add-to-group group-id="popupGroup" anchor="first" />
+        </action>
+        <action class="com.dylan.tools.action.CustomSecondAction"
+                id="com.dylan.tools.action.CustomSecondAction"
+                text="CustomSecondAction">
+            <add-to-group group-id="popupGroup" anchor="after" relative-to-action="popupGroup"/>
+        </action>
+        <!--    自定义样式弹出菜单    -->
+        <action id="com.dylan.tools.action.ComponentPopupAction"
+                class="com.dylan.tools.action.ComponentPopupAction"
+                text="ComponentPopupAction"
+                description="ComponentPopupAction">
+            <add-to-group group-id="PopupMenuActions" anchor="first" />
+            <keyboard-shortcut first-keystroke="control alt 2" keymap="$default" />
+        </action>
+        <!--    确认取消菜单    -->
+        <action id="com.dylan.tools.action.ConfirmPopupAction"
+                class="com.dylan.tools.action.ConfirmPopupAction"
+                text="ConfirmPopupAction"
+                description="ConfirmPopupAction">
+            <add-to-group group-id="PopupMenuActions" anchor="first" />
+            <keyboard-shortcut first-keystroke="control alt 3" keymap="$default" />
+        </action>
+        <!--    多选    -->
+        <action id="com.dylan.tools.action.MultiChoosePopupAction"
+                class="com.dylan.tools.action.MultiChoosePopupAction"
+                text="MultiChoosePopupAction" description="MultiChoosePopupAction">
+            <add-to-group group-id="PopupMenuActions" anchor="first" />
+            <keyboard-shortcut first-keystroke="control alt 5" keymap="$default" />
+        </action>
+        <!--    下拉菜单    -->
+        <group id="SubOuterGroup" />
+        <group id="SubInnerGroup" popup="true" text="SubInnerGroup">
+            <add-to-group group-id="SubOuterGroup" anchor="first" />
+            <action class="com.dylan.tools.action.SubAction" id="subAction"
+                    text="SubAction" description="SubAction" />
+        </group>
+        <action id="com.dylan.tools.action.SubGroupPopupAction"
+                class="com.dylan.tools.action.SubGroupPopupAction"
+                text="SubGroupPopupAction"
+                description="SubGroupPopupAction">
+            <add-to-group group-id="PopupMenuActions" anchor="first" />
+            <keyboard-shortcut first-keystroke="control alt 4" keymap="$default" />
+        </action>
+    </actions>
+
+</idea-plugin>
