@@ -9,6 +9,5 @@ public class SubAction extends AnAction {
     @Override
     public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
         Messages.showMessageDialog("Nest", "Nest", Messages.getInformationIcon());
-
     }
 }
