@@ -24,6 +24,9 @@ repositories {
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
+tasks.withType(Javadoc) {
+    options.encoding = "UTF-8"
+}
 
 
 dependencies {
@@ -33,6 +36,5 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version = "2020.2.4"
-//    updateSinceUntilBuild = false
-
+    updateSinceUntilBuild = false
 }

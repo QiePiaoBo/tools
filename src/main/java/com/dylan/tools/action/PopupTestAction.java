@@ -44,7 +44,7 @@ public class PopupTestAction extends AnAction implements ListSelectionListener, 
     public void onClosed(@NotNull LightweightWindowEvent event) {
 
         JBPopup jbPopup = event.asPopup();
-        System.out.println("popup关闭");
+        System.out.println("Popup close.");
         jbPopup.cancel();
 
     }

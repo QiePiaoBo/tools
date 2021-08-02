@@ -48,7 +48,7 @@ public class ConfirmPopupAction extends AnAction implements ListSelectionListene
     @Override
     public void onClosed(@NotNull LightweightWindowEvent event) {
         JBPopup jbPopup = event.asPopup();
-        System.out.println("关闭popup");
+        System.out.println("Popup close.");
         jbPopup.cancel();
     }
 }
